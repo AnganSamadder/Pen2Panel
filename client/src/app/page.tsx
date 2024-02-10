@@ -1,5 +1,6 @@
 import { list } from "postcss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Land from "./home/page";
 
 export default async function Home() {
   const res = await fetch("http://127.0.0.1:8080/api/home");
@@ -14,10 +15,7 @@ export default async function Home() {
 
   return (
     <div>
-      {data.people.map((person: string, index: number) => (
-        <div key={index}>{person}</div>
-      ))}
-      <div>{data.message}</div>
+      <Land />
     </div>
   );
 }
