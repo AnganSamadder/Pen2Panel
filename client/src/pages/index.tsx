@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Landing from './landing'
 
 function index() {
   const [message, setMessage] = useState("Loading...");
@@ -16,10 +17,7 @@ function index() {
 
   return (
     <div>
-      {people.map((person, index) => (
-        <div key={index}>{person}</div>
-      ))}
-      <div>{message}</div>
+      <Landing />
     </div>
   );
 }
